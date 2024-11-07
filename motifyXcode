@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import os, sys, getopt
+import shutil
+import log
+from pbxproj import XcodeProject
+
+def Modify(xcode_project_path):
+    project = XcodeProject.load(xcode_project_path + "/project.pbxproj")
+
+    # 文件相对路径
+    relative_file_path = "UnityFramework/PrivacyInfo.xcprivacy"
+
+    # 查找或创建 UnityFramework 组
+    unity_framework_group = project.get_or_create_group('UnityFramework')
+    
+    # 检查文件是否已存在
+    if project.get_files_by_path(relative_file_path):
+        print(f"File {relative_file_path} already exists.")
+        file = project.get_files_by_path(relative_file_path)[0]
+    else:
+        # 添加文件到 UnityFramework 组
+        file = project.add_file(relative_file_path, parent=unity_framework_group, force=False, target_name='UnityFramework')
+        print(f"Successfully added {relative_file_path}")
+    
+    # 保存项目
+    project.save()
+
+if __name__ == "__main__":
+    xcodeprojectpath=sys.argv[1]
+    Modify(xcodeprojectpath)
