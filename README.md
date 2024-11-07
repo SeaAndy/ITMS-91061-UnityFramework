@@ -155,3 +155,6 @@ ITMS-91061: 缺少隐私声明 - 你的应用包含“Frameworks/UnityFramework.
 
 
 4.使用python进行xcode工程进行文件关联
+
+PS：当前使用版本Unity2020.3.x 重新上架了应用没有再给警告邮件，理论上2021版本以后Unity已经处理了 Unity2018以前版本xcode工程不是Framewor方式无需处理
+Unity2019没有测试 应该和Unity2020 类似 具体差异自行修改
