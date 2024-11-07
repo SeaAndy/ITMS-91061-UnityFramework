@@ -151,4 +151,7 @@ ITMS-91061: 缺少隐私声明 - 你的应用包含“Frameworks/UnityFramework.
 
 3.将PrivacyInfo.xcprivacy放到对应xcode工程的UnityFramework文件夹内
 
+![image](https://github.com/user-attachments/assets/048f0e83-14bc-4d42-9ba6-707b6820aed6)
+
+
 4.使用python进行xcode工程进行文件关联
