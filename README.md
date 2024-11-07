@@ -48,6 +48,8 @@ ITMS-91061: 缺少隐私声明 - 你的应用包含“Frameworks/UnityFramework.
     <false />
   </dict>
 </plist>
+
+       
 2. 参考参数说明进行文件内容补充
 <?xml version="1.0" encoding="utf-8"?>
 <plist version="1.0">
@@ -145,4 +147,5 @@ ITMS-91061: 缺少隐私声明 - 你的应用包含“Frameworks/UnityFramework.
     <false />
   </dict>
 </plist>
+       
 3.使用python进行xcode工程修改
